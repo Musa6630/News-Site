@@ -1,7 +1,9 @@
 console.log("This is my index js file");
 
+// https://newsapi.org/v2/top-headlines?country=in&apiKey=2cd5a095e7ce4b99981fb2488e69f170
+//
 // Initialize the news api parameters
-let source = 'the-times-of-india';
+let source = 'top-headlines';
 let apiKey = '2cd5a095e7ce4b99981fb2488e69f170'
 
 // Grab the news container
@@ -9,8 +11,9 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 // Create an ajax get request
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
-
+// xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`, true);
+//
+xhr.open('GET', 'https://newsapi.org/v2/top-headlines?country=in&apiKey=2cd5a095e7ce4b99981fb2488e69f170', true);
 // What to do when response is ready
 xhr.onload = function () {
     if (this.status === 200) {
